@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { IoSearchSharp } from "react-icons/io5";
 import useConversation from "../../zustand/useConversation";
 import useGetConversations from "../../hooks/useGetConversations";
 import toast from "react-hot-toast";
@@ -24,33 +23,22 @@ const SearchInput = () => {
 		} else toast.error("No such user found!");
 	};
 	return (
-		<form onSubmit={handleSubmit} className='flex items-center gap-2'>
+		<form onSubmit={handleSubmit} className='flex items-center bg-black opacity-60'
+			style={{paddingLeft: "10px", paddingRight: "15px", gap: "9px", paddingTop: "6px", paddingBottom: "6px" }}>
+				{/* px-4 py-4 */}
 			<input
 				type='text'
 				placeholder='Search…'
-				className='input input-bordered rounded-full'
+				className='text-black rounded-xl border-white border-2 opacity-90'
+				style={{padding: '2px', width: '200%'}}
+				// input input-bordered rounded-full
 				value={search}
 				onChange={(e) => setSearch(e.target.value)}
 			/>
-			<button type='submit' className='btn btn-circle bg-sky-500 text-white'>
-				<IoSearchSharp className='w-6 h-6 outline-none' />
+			<button type='submit' className='btn-circle text-white'>
+				<img src="/Search.svg" alt="Logo" className='w-6 h-6 outline-none' />
 			</button>
 		</form>
 	);
 };
 export default SearchInput;
-
-// STARTER CODE SNIPPET
-// import { IoSearchSharp } from "react-icons/io5";
-
-// const SearchInput = () => {
-// 	return (
-// 		<form className='flex items-center gap-2'>
-// 			<input type='text' placeholder='Search…' className='input input-bordered rounded-full' />
-// 			<button type='submit' className='btn btn-circle bg-sky-500 text-white'>
-// 				<IoSearchSharp className='w-6 h-6 outline-none' />
-// 			</button>
-// 		</form>
-// 	);
-// };
-// export default SearchInput;
