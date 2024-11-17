@@ -3,10 +3,12 @@ import Sidebar from "../../components/sidebar/Sidebar";
 
 const Home = () => {
 	return (
-		<div className='flex sm:h-[450px] md:h-[550px] rounded-lg overflow-hidden bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0'>
+		<div className='flex h-[645px] rounded-3xl overflow-hidden bg-clip-padding backdrop-filter relative'
+		style={{backdropFilter: 'blur(10px)'}}>
 			<Sidebar />
 			<MessageContainer />
 		</div>
+		
 	);
 };
 export default Home;
