@@ -1,6 +1,6 @@
 ![Image Description](http://u.cubeupload.com/ibc8/sss13.png)
 ## Description
-[Russian readme](https://github.com/?????????/readme.md) 
+[Russian readme](https://github.com/getpaintoo/Tangle/blob/main/README_RUS.md)
 
 **Tangle**(rus. клубок). A simple messenger with a centralized database on MongoDB, based on Express and React.
 
